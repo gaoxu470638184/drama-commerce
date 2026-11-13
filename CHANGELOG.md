@@ -15,7 +15,7 @@
 - `references/delivery-checklist.md`：违禁词红线、病毒度 10 分制评分表
 - `examples/nut-gift-box/`：坚果礼盒 3 条片完整实战案例（含 ffmpeg 剪辑踩坑记录）
 - `install.sh` / `install.ps1`：跨平台安装脚本，自动备份旧版本
-- `scripts/validate.py` + GitHub Actions：frontmatter、死链、孤儿文件、编码自检
+- `scripts/validate.py`：frontmatter、死链、孤儿文件、占位符自检
 
 ### 已知问题
 

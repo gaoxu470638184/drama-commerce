@@ -18,7 +18,7 @@
 python scripts/validate.py
 ```
 
-必须 PASS。CI 也会检查：frontmatter 合法性、引用文件是否存在、`install.sh` 执行位、是否混入 CRLF 换行。
+必须 PASS。脚本会检查：frontmatter 合法性、SKILL.md 引用文件是否存在、孤儿参考文件、未替换的占位符。
 
 ## 内容规范
 

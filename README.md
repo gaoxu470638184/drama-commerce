@@ -120,8 +120,7 @@ drama-commerce/
 │   └── delivery-checklist.md        违禁词红线 + 病毒度评分表
 ├── examples/nut-gift-box/           完整实战案例：坚果礼盒 3 条片全流程产出
 ├── scripts/validate.py              仓库自检（frontmatter / 死链）
-├── install.sh / install.ps1         跨平台安装脚本
-└── .github/workflows/validate.yml   CI 自检
+└── install.sh / install.ps1         跨平台安装脚本
 ```
 
 ## 实战案例
