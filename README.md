@@ -2,10 +2,13 @@
 
 > 把「商品」装进「剧情」里的 Agent Skill。从一句商品描述，跑到可投放的竖屏成片。
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-4B32C3)](https://docs.claude.com/en/docs/claude-code/skills)
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](CHANGELOG.md)
-[![Language](https://img.shields.io/badge/lang-zh--CN-red)]()
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+![Agent Skills](https://img.shields.io/badge/Agent%20Skills-compatible-4B32C3)
+
+![Version](https://img.shields.io/badge/version-1.0.0-blue)
+
+![Language](https://img.shields.io/badge/lang-zh--CN-red)
 
 适用于 **Claude Code / WorkBuddy / Cursor / 任何支持 Agent Skills 规范的工具**。
 
@@ -23,24 +26,24 @@
 
 ## 核心设计原则
 
-| 原则 | 含义 |
-|------|------|
-| **剧情是壳，卖点是核** | 前 3 秒只留人、不提商品；商品只在情绪最高点或「解药」位置植入 |
-| **反精致** | 带货视频要像「有人随手拍」，不要像广告。首帧质感、手持感、原生字幕 > 电影感 |
-| **一条钩子一条命** | 每条片只验证一个钩子假设，批量做变体，而不是一条片塞满卖点 |
-| **成本分级** | 能用代码/素材合成的，绝不用视频模型烧钱；模型只生成「必须动起来」的碎片 |
+| 原则            | 含义                                      |
+| ------------- | --------------------------------------- |
+| **剧情是壳，卖点是核** | 前 3 秒只留人、不提商品；商品只在情绪最高点或「解药」位置植入        |
+| **反精致**       | 带货视频要像「有人随手拍」，不要像广告。首帧质感、手持感、原生字幕 > 电影感 |
+| **一条钩子一条命**   | 每条片只验证一个钩子假设，批量做变体，而不是一条片塞满卖点           |
+| **成本分级**      | 能用代码/素材合成的，绝不用视频模型烧钱；模型只生成「必须动起来」的碎片    |
 
 ## 七步流程
 
-| 步骤 | 动作 | 产出 |
-|------|------|------|
-| 1 输入收集 | 商品 / 人群 / 平台 / 形态 / 数量 | `00-brief.md` |
-| 2 卖点提炼 | 1 主卖点 + 2-3 辅助卖点，全改写成「人话场景」+ 痛点-解药映射表 | `01-selling-points.md` |
-| 3 钩子设计 | 从 8 个钩子公式选 3-5 个，每个写前 3 秒，过自检才留 | `02-hooks.md` |
-| 4 剧本 | 固定五拍：钩子 → 共鸣 → **反转植入** → 见证 → 转化 | `03-script-epNN.md` |
-| 5 分镜表 | 逐镜头标注景别/运镜/素材来源/商品出现方式 | `04-shotlist-epNN.md` |
-| 6 制作 | 按镜头分流：AI 生成 / 真图推镜 / TTS / 剪映或 ffmpeg | `05-production-notes.md` |
-| 7 自检 | 违禁词红线 + 病毒度评分（≥7/10 才交付）+ A/B 变体 | `06-review.md` |
+| 步骤     | 动作                                    | 产出                       |
+| ------ | ------------------------------------- | ------------------------ |
+| 1 输入收集 | 商品 / 人群 / 平台 / 形态 / 数量                | `00-brief.md`            |
+| 2 卖点提炼 | 1 主卖点 + 2-3 辅助卖点，全改写成「人话场景」+ 痛点-解药映射表 | `01-selling-points.md`   |
+| 3 钩子设计 | 从 8 个钩子公式选 3-5 个，每个写前 3 秒，过自检才留       | `02-hooks.md`            |
+| 4 剧本   | 固定五拍：钩子 → 共鸣 → **反转植入** → 见证 → 转化     | `03-script-epNN.md`      |
+| 5 分镜表  | 逐镜头标注景别/运镜/素材来源/商品出现方式                | `04-shotlist-epNN.md`    |
+| 6 制作   | 按镜头分流：AI 生成 / 真图推镜 / TTS / 剪映或 ffmpeg | `05-production-notes.md` |
+| 7 自检   | 违禁词红线 + 病毒度评分（≥7/10 才交付）+ A/B 变体      | `06-review.md`           |
 
 ## 安装
 
@@ -89,11 +92,11 @@ cp -r drama-commerce <你的项目>/.workbuddy/skills/
 
 ```
 帮我做一条短剧带货视频
-商品：坚果礼盒、59.9、核心卖点 9 种高品质坚果
-人群：30-70 岁、送父母
-平台：视频号
-形态：AI 生成剧情（无真人）
-数量：3 条
+商品：便携榨汁杯、89 元、核心卖点 30 秒出汁、刀头不用拆洗
+人群：25-35 岁上班族女性、办公室下午茶
+平台：抖音
+形态：实拍混剪 + 口播
+数量：3 条（3 个钩子变体）
 ```
 
 Skill 会自动按七步推进，并在每一步停下来等你确认。
