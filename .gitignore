@@ -1,0 +1,31 @@
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 安装脚本自动产生的备份
+*.bak.*
+*.zip
+
+# 本地生产产物（不要提交素材）
+samples/
+output/
+*.mp4
+*.mp3
+*.wav
+*.png
+*.jpg
+*.jpeg
+*.ttf
+*.ttc
+
+# 本地环境
+.env
+.env.local
