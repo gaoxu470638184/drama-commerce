@@ -50,14 +50,14 @@
 ### 方式一：一行命令（自动探测目录）
 
 ```bash
-git clone https://github.com/<your-org>/drama-commerce.git /tmp/drama-commerce
+git clone https://github.com/gaoxu470638184/drama-commerce.git /tmp/drama-commerce
 cd /tmp/drama-commerce && ./install.sh
 ```
 
 Windows PowerShell：
 
 ```powershell
-git clone https://github.com/<your-org>/drama-commerce.git $env:TEMP\drama-commerce
+git clone https://github.com/gaoxu470638184/drama-commerce.git $env:TEMP\drama-commerce
 cd $env:TEMP\drama-commerce
 powershell -ExecutionPolicy Bypass -File .\install.ps1
 ```
@@ -67,7 +67,7 @@ powershell -ExecutionPolicy Bypass -File .\install.ps1
 ### 方式二：手动放置
 
 ```bash
-git clone https://github.com/<your-org>/drama-commerce.git
+git clone https://github.com/gaoxu470638184/drama-commerce.git
 
 # WorkBuddy
 cp -r drama-commerce ~/.workbuddy/skills/
